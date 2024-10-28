@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>函数学习</title>
+</head>
+<body>
+    <script>
+        // 计算1-100的和的函数案例
+        function f1(){
+            var n=0;
+            for(var i=0;i<=100;i++){
+                n+=i;
+            }
+            console.log(n);
+        }
+        // 形参和实参
+        function f1(k){
+            var n=0;
+            for(var i=0;i<=k;i++){
+                n+=i;
+            }
+            console.log(n);
+        }
+        // 返回值
+        function f2(){
+            var n=0;
+            for(var i=0;i<=100;i++){
+                n+=i;
+            }
+            return n;
+        }
+        var h=f2();
+        console.log(h);
+        
+    </script>
+</body>
+</html>
