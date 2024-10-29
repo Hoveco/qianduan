@@ -33,18 +33,30 @@
         //     }
         //     i++;
         // }
-        
-        var i=1;
-        var s=0;
-        while(i<=100){
-            if(i%2==0){
-                s=s+i;
-                i++;
-                console.log(s);
-            }else{
-                i++;
+        // 函数求1-100之间所有偶数的和
+        function sum(){
+            var s=0;
+            for(var i=1;i<=100;i++){
+                if(i%2==0){
+                    s=s+i;
+                }
             }
+            return s;
         }
+        console.log(sum());
+
+
+        // var i=1;
+        // var s=0;
+        // while(i<=100){
+        //     if(i%2==0){
+        //         s=s+i;
+        //         i++;
+        //         console.log(s);
+        //     }else{
+        //         i++;
+        //     }
+        // }
 
     </script>
 </body>
