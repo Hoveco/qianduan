@@ -1,0 +1,11 @@
+20241031错题回顾
+ 1. <body bgcolor="yellow">可以将背景颜色改成黄色
+    背景颜色的设立是bgcolor,不是color属性
+ 2. 产生粗体的标签是<b>,不是<bold>，没有相关的标签
+ 3. 超链接的链接属性是 href，不是url。
+ 4. ol标签是有序列表，ul是无序列表，dl是自定义列表，dt是定义列表项，没有<list>标签
+ 5. 在html中，使用select可以产生一个下拉列表控件，通常配合option（下拉列表项）使用。
+ 6. 在html中，使用<textarea>可以产生一个文本域控件，他比文本框控件具有更大的空间，适合用来输入大段文字。
+ 7. 给body添加一个background属性，并将其值设为图片的路径，即可设定body的背景图片，如下所示：
+    ​<body background="background.gif">
+    
