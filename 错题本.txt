@@ -7,5 +7,5 @@
  5. 在html中，使用select可以产生一个下拉列表控件，通常配合option（下拉列表项）使用。
  6. 在html中，使用<textarea>可以产生一个文本域控件，他比文本框控件具有更大的空间，适合用来输入大段文字。
  7. 给body添加一个background属性，并将其值设为图片的路径，即可设定body的背景图片，如下所示：
-    ​<body background="background.gif">
+    <body background="background.gif">
     
