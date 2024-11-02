@@ -35,28 +35,64 @@
 
         // 声明对象
         let obj = {
-            name:'小米10 青春版',
+            phone_name:'小米10 青春版',
             number:'100012816024',
             weight:'0.55kg',
             address:'中国大陆',
+            phone:function(){
+                console.log('打电话');
+            },
         }
 
         // 获取对象的属性或者方法，对象.属性名
-        console.log(obj.name);
-        console.log(obj.number);
+        // console.log(obj.name);
+        // console.log(obj.number);
 
         // 修改对象的属性
-        obj.name = '小米10';
+        obj.name = '小米10 plus';
 
         // 删除对象的属性
         // delete obj.weight;
 
         // 增加对象的属性
         obj.color = '粉的';
+        obj.price = '5999元';
         // 打印所有属性
-        for(let key in obj){
-            console.log(key,obj[key]);
+        // for(let key in obj){
+        //     console.log(key,obj[key]);
+        // }
+
+        // 对象的调用 1.对象.方法名  2.对象['方法名']
+        // obj.phone();
+
+        // 对象的遍历
+        let obj1 = {
+            name:'小明',
+            age:12,
+            sex:'男',
+            address:'河南郑州'
         }
+        // 遍历对象
+        for(let key in obj1){
+            console.log(obj1[key]); //属性名，
+        }
+
+        // 遍历对象数组
+        // 定义一个存储了4个同学信息的数组
+        let arr = [
+            {name:'小明',age:12,sex:'男',address:'河南郑州'},
+            {name:'小红',age:13,sex:'女',address:'河南郑州'},
+            {name:'小刚',age:14,sex:'男',address:'河南郑州'},
+            {name:'小花',age:15,sex:'女',address:'河南郑州'},
+        ];
+        for(let i=0;i<arr.length;i++){
+            // console.log(arr[i].name);
+            console.log(arr[i].name);
+            console.log(arr[i].age);
+            console.log(arr[i].sex);
+            console.log(arr[i].address);
+        }
+
 
     </script>
 </body>
