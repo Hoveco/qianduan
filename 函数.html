@@ -7,33 +7,90 @@
 </head>
 <body>
     <script>
-        // 计算1-100的和的函数案例
-        function f1(){
-            var n=0;
-            for(var i=0;i<=100;i++){
-                n+=i;
-            }
-            console.log(n);
+        // // 计算1-100的和的函数案例
+        // function f1(){
+        //     var n=0;
+        //     for(var i=0;i<=100;i++){
+        //         n+=i;
+        //     }
+        //     console.log(n);
+        // }
+        // // 形参和实参
+        // function f1(k){
+        //     var n=0;
+        //     for(var i=0;i<=k;i++){
+        //         n+=i;
+        //     }
+        //     console.log(n);
+        // }
+        // // 返回值
+        // function f2(){
+        //     var n=0;
+        //     for(var i=0;i<=100;i++){
+        //         n+=i;
+        //     }
+        //     return n;
+        // }
+        // var h=f2();
+        // console.log(h);
+
+        // 构造函数：是一种特殊的函数，用于创建对象
+        /*构造函数的作用：
+        1. 创建对象
+        2. 对象的属性和方法
+        3. 对象的构造过程
+        4. 对象的实例化过程
+        // 使用场景：创建对象
+        // 构造函数的两个点：
+        // 1. 函数名首字母大写
+        // 2. 函数内部使用this关键字，this表示创建的对象
+
+
+
+         * 创建一个表示猪的对象的构造函数
+
+          @param {string} uname - 猪的用户名
+          @param {number} age - 猪的年龄
+          @param {string} gender - 猪的性别
+         */
+       /* function Pig(uname,age,gender){
+            // 设置猪的用户名
+            this.uname=uname;
+            // 设置猪的年龄
+            this.age=age;
+            // 设置猪的性别
+            this.gender=gender;
         }
-        // 形参和实参
-        function f1(k){
-            var n=0;
-            for(var i=0;i<=k;i++){
-                n+=i;
-            }
-            console.log(n);
+        const paige=new Pig('小花',3,'女');
+        console.log(paige);*/
+
+        // 案例：
+        // 创建一个Goods的构造函数
+        /*
+         * @param {string} name - 商品名称
+         * @param {number} price - 商品价格
+         * @param {number} count - 商品数量
+
+        function Goods(name,price,count){
+            this.name=name;
+            this.price=price;
+            this.count=count;
         }
-        // 返回值
-        function f2(){
-            var n=0;
-            for(var i=0;i<=100;i++){
-                n+=i;
-            }
-            return n;
-        }
-        var h=f2();
-        console.log(h);
-        
+        const mi = new Goods('小米',1999,10);
+        console.log(mi);
+        const huawei = new Goods('华为',2999,20);
+        console.log(huawei);
+        const vivo = new Goods('vivo',1999,30);
+        console.log(vivo);
+        */
+
+        // 构造函数的实例化过程：
+        // 1. 创建一个新的空对象
+        // 2. 将构造函数的this指向新对象
+        // 3. 执行构造函数中的代码，为对象添加属性
+        // 4. 返回新对象
+
+
     </script>
 </body>
 </html>
