@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作用域、变量提升、垃圾回收</title>
+</head>
+<body>
+    <script>
+        // 作用域：规定了哪些变量和函数对当前代码是可见的，离开了作用域，就不能访问
+        // 作用域分为三种：全局作用域、函数作用域、块级作用域
+        // 函数作用域：函数内部定义的变量，只在函数内部可见，函数外部不可见
+        // 块级作用域：块级作用域，比如if、for、while、switch、function、{}
+        // let和const声明的变量只在当前作用域可见，不会提升
+        // script和js文件的作用域是全局作用域
+        // 垃圾回收：全局变量一般不会被回收，函数内部定义的变量会被回收
+        // 内存泄露：内存泄露指内存中仍然存在的对象，但是没有任何引用指向它，导致无法释放，从而导致内存泄露。
+        // 垃圾回收算法：引用计数算法、标记清除算法、标记整理算法
+
+        // 闭包：函数和函数外部的变量，如果函数外部的变量没有被引用，那么这个变量就是闭包
+        // 案例1：
+        // function test(){
+        //     let a = 10;
+        //     function test1(){
+        //         console.log(a);
+        //     }
+        //     return test1;
+        // }
+        // test();
+
+        // 常见的闭包形式，
+        function test(){
+            let b = 11;
+            function test1(){
+                console.log(b);
+            }
+            return test1;
+        }
+        const c = test();
+        c();
+
+        // function test(){
+        //     let o1 = {}
+        //     let o2 = {}
+        //     o1.a = o2
+        //     o2.a = o1
+        //     return '引用计数无法回收'
+        // }
+        // test();
+
+        // 标记清理算法：从根节点开始，标记出所有可以回收的对象，然后清理掉
+
+
+    </script>
+</body>
+</html>
