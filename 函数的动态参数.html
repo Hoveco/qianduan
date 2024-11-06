@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>函数的动态参数</title>
+</head>
+<body>
+<script>
+    /*
+     * 计算任意数量参数的总和
+     *
+     * 该函数使用 arguments 对象来遍历所有传入的参数，并计算它们的总和
+     * arguments 对象是一个类数组对象，包含了函数调用时传入的所有参数
+     *
+     * @return 无返回值，但会在控制台输出参数之和
+     */
+    function getSun() {
+        // arguments 动态参数 只存在函数里面
+        let sum = 0;
+        for (let i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+        console.log(sum);
+    }
+    getSun(1, 2, 3, 4, 5);
+
+    // 剩余参数，
+    /*
+     * 计算任意数量参数的和
+     *
+     * @param {...number} args - 一个或多个数字参数
+     */
+    // ...是
+    // 展开运算符
+    // ...args 是一个数组
+    function getSum(...args) {
+        // 初始化和变量为0
+        let sum = 0;
+        // 遍历所有参数
+        for (let i = 0; i < args.length; i++) {
+            // 累加每个参数到和变量
+            sum += args[i];
+        }
+        // 输出和
+        console.log(sum);
+    }
+</script>
+</body>
+</html>
