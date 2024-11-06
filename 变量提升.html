@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>变量提升</title>
+</head>
+<body>
+<script>
+    //把所有var声明的提升到当前作用域的最前面；
+    // 只提示变量声明，不提升变量赋值
+    // 变量在var 声明之前被访问，变量的值是undefined；
+    // let和const声明的变量，不存在变量提升
+    // 变量提升出现在相同的作用域中；
+    // 实际开发中推荐先声明，再使用
+
+    // 案例1：
+    console.log(num +'件');
+    var num = 10;
+
+    // 案例2:
+    function test(){
+        console.log(num);
+        var num = 10;
+    }
+</script>
+</body>
+</html>
