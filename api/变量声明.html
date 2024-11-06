@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量声明</title>
+</head>
+<body>
+  <script>
+    /*变量声明有三种形式：
+    1. var
+    2. let
+    3. const
+    使用const声明的变量不能被重新赋值，但可以改变对象内部的属性。
+    对于引用数据类型，const声明的变量，里面存的不是值，而是引用，所以可以改变里面的值。
+    */
+    const arr = ['red','green','blue'];
+    arr.push('orange');
+    console.log(arr);
+  </script>
+</body>
+</html>
