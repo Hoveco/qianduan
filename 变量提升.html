@@ -23,6 +23,23 @@
         console.log(num);
         var num = 10;
     }
+
+    // 案例3：
+    // 调用函数 fu()，此时函数 fu 尚未声明，但可以正常执行，体现了函数提升的现象
+    fu();
+
+    /**
+     * 函数 fu 的定义
+     * 函数提升示例：在 JavaScript 中，函数声明会被提升到其包含作用域的顶部，这意味着可以在函数声明之前调用该函数
+     */
+    function fu(){
+        console.log('函数提升');
+    }
+
+    // 函数表达式必须先声明和赋值，再使用；
+    var fun =function (){
+        console.log('函数表达式');
+    }
 </script>
 </body>
 </html>
