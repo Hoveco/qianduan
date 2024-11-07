@@ -1,25 +1,79 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>商城首页</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+        }
+        .carousel-controls button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+        .carousel-controls .prev {
+            left: 10px;
+        }
+        .carousel-controls .next {
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
-    <script>
-        // var str1 = "李四";
-        // var str2 = "你好，我喜欢";
-        // alert(str2);
-        // var s1 = "hello";
-        // console.log(s.length);
-        // var s2 = "123";
-        // parseInt(s2);
-        // var s3 = s1 + s2;
-        // console.log( typeof s2  );
+    <div class="carousel-container">
+        <div class="carousel-slide" id="carousel-slide">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
+        </div>
+        <div class="carousel-controls">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+    </div>
 
-        var a = Boolean("1");
-        
-        
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll('.carousel-slide img');
+        const totalSlides = slides.length;
+
+        function moveSlide(step) {
+            slideIndex += step;
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0;
+            } else if (slideIndex < 0) {
+                slideIndex = totalSlides - 1;
+            }
+            document.getElementById('carousel-slide').style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+
+        // 自动播放
+        setInterval(() => {
+            moveSlide(1);
+        }, 3000);
     </script>
 </body>
 </html>
