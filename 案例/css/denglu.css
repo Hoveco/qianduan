@@ -9,3 +9,22 @@ input { width: 220px; display: block; padding: 4px; margin: 0 0 10px 0; font-siz
 input[type=checkbox] { width: 20px; margin: 0; display: inline-block; }
 .button { background: url(button-bg.png) repeat-x top center; border: 1px solid #999; -moz-border-radius: 5px; padding: 5px; color: black; font-weight: bold; -webkit-border-radius: 5px; font-size: 13px; width: 70px; }
 .button:hover { background: white; color: black; }
+.clear::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.remember-me-label {
+    padding: 0;
+}
+
+.remember-me-checkbox {
+    position: relative;
+    top: 3px;
+    margin: 0;
+}
+
+.button {
+    margin: -20px 0 0 287px;
+}

@@ -7,25 +7,26 @@
 </head>
 <body>
   <!-- 登录表单 -->
-  <form action="#" id="login-form" method="post">
-    <fieldset>
-      <legend>登录</legend>
-      <!-- Email 输入框 -->
-      <label for="login">Email</label>
-      <input type="text" id="login" name="login">
-      <div class="clear"></div>
-      <!-- 密码输入框 -->
-      <label for="password">密码</label>
-      <input type="password" id="password" name="password">
-      <div class="clear"></div>
-      <!-- 记住登录状态的复选框 -->
-      <label for="remember_me" style="padding: 0;">记住状态?</label>
-      <input type="checkbox" id="remember_me" style="position: relative; top: 3px; margin: 0; " name="remember_me">
-      <div class="clear"></div>
-      <br>
-      <!-- 登录按钮 -->
-      <input type="submit" style="margin: -20px 0 0 287px;" class="button" name="commit" value="登 录">
-    </fieldset>
-  </form>
+  <!-- HTML 部分 -->
+<form action="/login" id="login-form" method="post">
+  <fieldset>
+    <legend>登录</legend>
+    <!-- Email 输入框 -->
+    <label for="login">Email</label>
+    <input type="email" id="login" name="login" required>
+    <div class="clear"></div>
+    <!-- 密码输入框 -->
+    <label for="password">密码</label>
+    <input type="password" id="password" name="password" required>
+    <div class="clear"></div>
+    <!-- 记住登录状态的复选框 -->
+    <label for="remember_me" class="remember-me-label">记住状态?</label>
+    <input type="checkbox" id="remember_me" class="remember-me-checkbox" name="remember_me">
+    <div class="clear"></div>
+    <br>
+    <!-- 登录按钮 -->
+    <input type="submit" class="button" name="commit" value="登 录">
+  </fieldset>
+</form>
 </body>
 </html>
