@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepseek 在线聊天</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <header class="chat-header">
+            <h1>Deepseek 在线聊天</h1>
+        </header>
+        <main class="chat-window">
+            <div class="message-container" id="message-container">
+                <!-- 聊天消息将在这里显示 -->
+            </div>
+        </main>
+        <footer class="chat-input">
+            <input type="text" id="chat-input-field" placeholder="输入你的消息...">
+            <button id="send-button">发送</button>
+        </footer>
+    </div>
+
+    <script>
+        // 获取DOM元素
+        const messageContainer = document.getElementById('message-container');
+        const chatInputField = document.getElementById('chat-input-field');
+        const sendButton = document.getElementById('send-button');
+
+        // 发送消息函数
+        function sendMessage() {
+            const messageText = chatInputField.value.trim();
+            if (messageText === '') return;
+
+            // 创建消息元素
+            const messageElement = document.createElement('div');
+            messageElement.classList.add('message');
+            messageElement.textContent = messageText;
+
+            // 将消息添加到消息容器中
+            messageContainer.appendChild(messageElement);
+
+            // 清空输入框
+            chatInputField.value = '';
+
+            // 滚动到最新消息
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+        }
+
+        // 绑定发送按钮点击事件
+        sendButton.addEventListener('click', sendMessage);
+
+        // 绑定输入框回车键事件
+        chatInputField.addEventListener('keypress', (event) => {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>
